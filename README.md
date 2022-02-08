@@ -1,0 +1,33 @@
+# Poly-Forgery
+> _Thank Mojang for Custom Fonts_
+
+A serverside Fabric mod that restores [Alloy Forgery's](https://github.com/LordDeatHunter/Alloy-Forgery) Forge Controller GUI when using it with [PolyMC](https://github.com/TheEpicBlock/PolyMc) _(kinda)_.
+
+## Why would you need this?
+If you host a server using [PolyMC](https://github.com/TheEpicBlock/PolyMc) modded UIs won't be displayed correctly (or straight up won't work sometimes); this mod imitates the [Alloy Forgery's](https://github.com/LordDeatHunter/Alloy-Forgery) Forge Controller GUI via [PolyMC](https://github.com/TheEpicBlock/PolyMc), even for Vanilla clients ([POLYMC](https://github.com/TheEpicBlock/PolyMc) / [POLYMER](https://github.com/Patbox/polymer) - GENERATED RESOURCE PACK REQUIRED).
+
+_PolyMC + Alloy Forgery without this mod_<br>
+![PolyMC + Alloy Forgery without this mod](https://cdn.discordapp.com/attachments/735840853662236713/940663766280962088/unknown.png)
+<br>
+<br>
+_PolyMC + Alloy Forgery with this mod_<br>
+![PolyMC + Alloy Forgery with this mod](https://cdn.discordapp.com/attachments/735840853662236713/940665128423137290/unknown.png)
+
+## Bleeding edge builds
+Upstream builds are available in via [GitHub Actions](https://github.com/CamperSamu/WhereAreYouFrom/actions).
+
+___
+## Setup
+
+For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+
+## Credits
+
+- [TheEpicBlock for PolyMC](https://github.com/TheEpicBlock/PolyMc)
+- [Patbox for Polymer, a part of PolyMC and the core of may Serverside mods](https://github.com/Patbox/polymer)
+- [LordDeatHunter, Glisco and Noaaan for Alloy Forgery](https://github.com/LordDeatHunter/Alloy-Forgery)
+- [Fabric Server-Side Development Discord for helping me while making this mod and other mods](https://discord.gg/spsDnxp) (like [WAYF?](https://github.com/CamperSamu/WhereAreYouFrom))
+
+## License
+
+This mod is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.

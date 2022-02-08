@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "polyforgery",
+  "version": "${version}",
+
+  "name": "Poly Forgery",
+  "description": "GUI polyfill for Alloy Forgery with PolyMC API.",
+  "authors": [
+    "Camper_Samu"
+  ],
+  "contact": {
+    "homepage": "https://github.com/CamperSamu",
+    "sources": "https://github.com/CamperSamu/CamperSamu"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/polyforgery/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "polymc": [
+      "com.campersamu.polyforgery.Init"
+    ]
+  },
+  "mixins": [
+    "polyforgery.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "polymc": ">=3.3.3",
+    "alloy_forgery": ">=2.0.8+1.18",
+    "java": ">=17"
+  },
+  "suggests": {
+    "shoutout": "*"
+  }
+}
