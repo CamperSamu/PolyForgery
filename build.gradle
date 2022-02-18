@@ -26,6 +26,7 @@ repositories {
             includeGroup "maven.modrinth"
         }
     }
+    maven { url = "https://maven.nucleoid.xyz/" }
 }
 
 dependencies {
@@ -38,6 +39,8 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "com.github.TheEpicBlock:PolyMc:${project.polymc_version}"
     modImplementation "maven.modrinth:alloy-forgery:${project.alloy_forgery_version}"
+    modCompileOnly "maven.modrinth:polydex:${project.polydex_version}"
+    modCompileOnly "eu.pb4:sgui:${project.sgui_version}"
 }
 
 processResources {

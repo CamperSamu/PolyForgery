@@ -20,6 +20,9 @@
   "entrypoints": {
     "polymc": [
       "com.campersamu.polyforgery.Init"
+    ],
+    "main": [
+      "com.campersamu.polyforgery.Init"
     ]
   },
   "mixins": [
@@ -35,6 +38,7 @@
     "java": ">=17"
   },
   "suggests": {
-    "shoutout": "*"
+    "shoutout": "*",
+    "polydex": ">=0.1.1"
   }
 }
