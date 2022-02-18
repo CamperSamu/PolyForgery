@@ -27,6 +27,7 @@ For setup instructions please see the [fabric wiki page](https://fabricmc.net/wi
 - [Patbox for Polymer, a part of PolyMC and the core of may Serverside mods](https://github.com/Patbox/polymer)
 - [LordDeatHunter, Glisco and Noaaan for Alloy Forgery](https://github.com/LordDeatHunter/Alloy-Forgery)
 - [Fabric Server-Side Development Discord for helping me while making this mod and other mods](https://discord.gg/spsDnxp) (like [WAYF?](https://github.com/CamperSamu/WhereAreYouFrom))
+- [AmberWat for the Negative Spaces Resourcepack](https://github.com/AmberWat/NegativeSpaceFont)
 
 ## License
 
