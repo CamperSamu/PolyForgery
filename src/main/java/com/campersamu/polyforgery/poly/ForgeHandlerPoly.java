@@ -30,12 +30,12 @@ public class ForgeHandlerPoly extends ScreenHandler {
         int height = 3;
         this.base = base;
         this.totalSlots = width * height;
-        int fakedSlotsTemp = 0;
+        int fakedSlotsTemp = 15;
 
         List<Slot> baseSlots = GuiUtils.removePlayerSlots(base.slots);
 
         for (int i = 0; i < totalSlots; i++) {
-            switch (i){
+            switch (i) {
                 case 2 -> addSlot(baseSlots.get(2));
                 case 3 -> addSlot(baseSlots.get(3));
                 case 4 -> addSlot(baseSlots.get(4));
@@ -56,6 +56,7 @@ public class ForgeHandlerPoly extends ScreenHandler {
         for (int y = 0; y < 3; ++y) {
             for (int x = 0; x < 9; ++x) {
                 this.addSlot(new Slot(playerInventory, x + y * 9 + 9, 8 + x * 18, 84 + y * 18));
+//                fakedSlotsTemp++;
             }
 
         }
@@ -63,6 +64,7 @@ public class ForgeHandlerPoly extends ScreenHandler {
         //Player hotbar
         for (int hotbar = 0; hotbar < 9; ++hotbar) {
             this.addSlot(new Slot(playerInventory, hotbar, 8 + hotbar * 18, 142));
+//            fakedSlotsTemp++;
         }
 
         this.fakedSlots = fakedSlotsTemp;
@@ -76,8 +78,12 @@ public class ForgeHandlerPoly extends ScreenHandler {
 
     @Override
     public ItemStack transferSlot(PlayerEntity player, int index) {
-        if (index > totalSlots) {
-            index -= fakedSlots;
+        switch (index){
+            case 2, 3, 4, 5, 6 -> {}
+            case 9 -> index = 0;
+            case 11, 12, 13, 14, 15 -> index -= 4;
+            case 17 -> index = 1;
+            default -> index -= fakedSlots;
         }
         return base.transferSlot(player, index);
     }

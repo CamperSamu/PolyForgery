@@ -30,15 +30,15 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.12.12",
+    "fabricloader": "*",
     "fabric": "*",
-    "minecraft": "1.18.x",
-    "polymc": ">=3.3.3",
-    "alloy_forgery": ">=2.0.8+1.18",
+    "minecraft": "1.19.x",
+    "polymc": ">=5.0.0",
+    "alloy_forgery": ">=2.0.14+1.19",
     "java": ">=17"
   },
   "suggests": {
     "shoutout": "*",
-    "polydex": ">=0.1.1"
+    "polydex": ">=0.1.7+1.19-rc2"
   }
 }

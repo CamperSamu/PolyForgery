@@ -27,6 +27,13 @@ repositories {
         }
     }
     maven { url = "https://maven.nucleoid.xyz/" }
+    repositories {
+        maven {
+            url "https://maven.theepicblock.nl"
+            content { includeGroup("nl.theepicblock") }
+        }
+    }
+    mavenLocal()
 }
 
 dependencies {
@@ -38,6 +45,7 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "com.github.TheEpicBlock:PolyMc:${project.polymc_version}"
+//    modImplementation include("com.github.TheEpicBlock:resource-locator-api:${project.poly_res_version}")
     modImplementation "maven.modrinth:alloy-forgery:${project.alloy_forgery_version}"
     modCompileOnly "maven.modrinth:polydex:${project.polydex_version}"
     modCompileOnly "eu.pb4:sgui:${project.sgui_version}"

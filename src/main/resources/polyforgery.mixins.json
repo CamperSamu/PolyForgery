@@ -4,7 +4,6 @@
   "package": "com.campersamu.polyforgery.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "SetForgeScreenNameMixin"
   ],
   "injectors": {
     "defaultRequire": 1
