@@ -15,10 +15,10 @@ _PolyMC + Alloy Forgery with this mod_<br>
 
 <br>
 
-_(The mod that adds the materials used in this showcase is [Mythic Metals by Noaaan](https://modrinth.com/mod/mythicmetals))_
+_(The mod that adds the materials used in this showcase is [Mythic Metals by Noaaan](https://github.com/Noaaan/MythicMetals))_
 
 ## Bleeding edge builds
-Upstream builds are available in via [GitHub Actions](https://github.com/CamperSamu/WhereAreYouFrom/actions).
+Upstream builds are available in via [GitHub Actions](https://github.com/CamperSamu/PolyForgery/actions).
 
 ___
 ## Setup
