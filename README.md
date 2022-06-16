@@ -13,6 +13,10 @@ _PolyMC + Alloy Forgery without this mod_<br>
 _PolyMC + Alloy Forgery with this mod_<br>
 ![PolyMC + Alloy Forgery with this mod](https://cdn.discordapp.com/attachments/735840853662236713/940665128423137290/unknown.png)
 
+<br>
+
+_(The mod that adds the materials used in this showcase is [Mythic Metals by Noaaan](https://modrinth.com/mod/mythicmetals))_
+
 ## Bleeding edge builds
 Upstream builds are available in via [GitHub Actions](https://github.com/CamperSamu/WhereAreYouFrom/actions).
 
@@ -24,7 +28,7 @@ For setup instructions please see the [fabric wiki page](https://fabricmc.net/wi
 ## Credits
 
 - [TheEpicBlock for PolyMC](https://github.com/TheEpicBlock/PolyMc)
-- [Patbox for Polymer, a part of PolyMC and the core of may Serverside mods](https://github.com/Patbox/polymer)
+- [Patbox for Polymer, a part of PolyMC and the core of many Serverside mods](https://github.com/Patbox/polymer)
 - [LordDeatHunter, Glisco and Noaaan for Alloy Forgery](https://github.com/LordDeatHunter/Alloy-Forgery)
 - [Fabric Server-Side Development Discord for helping me while making this mod and other mods](https://discord.gg/spsDnxp) (like [WAYF?](https://github.com/CamperSamu/WhereAreYouFrom))
 - [AmberWat for the Negative Spaces Resourcepack](https://github.com/AmberWat/NegativeSpaceFont)
