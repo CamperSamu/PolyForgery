@@ -6,7 +6,8 @@
   "name": "Poly Forgery",
   "description": "GUI polyfill for Alloy Forgery with PolyMC API.",
   "authors": [
-    "Camper_Samu"
+    "Camper_Samu",
+    "Potatoboy9999"
   ],
   "contact": {
     "homepage": "https://github.com/CamperSamu",

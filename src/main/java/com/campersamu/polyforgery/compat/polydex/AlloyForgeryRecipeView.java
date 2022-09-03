@@ -5,20 +5,31 @@ import eu.pb4.polydex.api.ItemEntry;
 import eu.pb4.polydex.api.ItemPageView;
 import eu.pb4.polydex.api.PolydexUtils;
 import eu.pb4.sgui.api.elements.GuiElement;
+import eu.pb4.sgui.api.elements.GuiElementBuilder;
 import eu.pb4.sgui.api.gui.layered.Layer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.*;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Style;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.collection.DefaultedList;
 import wraith.alloyforgery.recipe.AlloyForgeRecipe;
 
-@SuppressWarnings("deprecation")
+import java.util.List;
+
 public class AlloyForgeryRecipeView implements ItemPageView<AlloyForgeRecipe> {
 
     @Override
-    public GuiElement getIcon(ItemEntry itemEntry, AlloyForgeRecipe alloyForgeRecipe, ServerPlayerEntity serverPlayerEntity, Runnable runnable) {
-        return new GuiElement(Items.BRICKS.getDefaultStack(), GuiElement.EMPTY_CALLBACK);
+    public GuiElement getIcon(ItemEntry itemEntry, AlloyForgeRecipe recipe, ServerPlayerEntity serverPlayerEntity, Runnable runnable) {
+        return new GuiElementBuilder(Items.BRICKS)
+                .setName(Text.translatable("container.alloy_forgery.rei.title"))
+                .setLore(List.of(
+                        Text.translatable("container.alloy_forgery.rei.min_tier", recipe.getMinForgeTier()).setStyle(Style.EMPTY.withColor(Formatting.GRAY)),
+                        Text.translatable("container.alloy_forgery.rei.fuel_per_tick", recipe.getFuelPerTick()).setStyle(Style.EMPTY.withColor(Formatting.GRAY))
+                ))
+                .build();
     }
 
     @Override
@@ -34,6 +45,7 @@ public class AlloyForgeryRecipeView implements ItemPageView<AlloyForgeRecipe> {
             layer.setSlot(i % 5 + 9 * (i / 5) + 10, PolydexUtils.getIngredientDisplay(stacks));
         }
 
+        //noinspection deprecation
         layer.setSlot(25, new GuiElement(recipe.getOutput(), GuiElement.EMPTY_CALLBACK));
     }
 

@@ -1,0 +1,20 @@
+{
+  "providers": [
+    {
+      "type": "space",
+      "advances": {
+        ".": 94,
+        "-": -110
+      }
+    },
+    {
+      "type": "bitmap",
+      "file": "polyforgery:gui/smelt.png",
+      "ascent": 3,
+      "height": 19,
+      "chars": [
+        "01234"
+      ]
+    }
+  ]
+}

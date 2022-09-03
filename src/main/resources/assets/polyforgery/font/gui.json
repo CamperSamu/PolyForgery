@@ -1,0 +1,20 @@
+{
+  "providers": [
+    {
+      "type": "space",
+      "advances": {
+        ".": -118,
+        "-": -8
+      }
+    },
+    {
+      "type": "bitmap",
+      "file": "polyforgery:gui/forge_controller.png",
+      "ascent": 34,
+      "height": 256,
+      "chars": [
+        "0"
+      ]
+    }
+  ]
+}
