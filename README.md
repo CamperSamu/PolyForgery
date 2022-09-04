@@ -11,7 +11,10 @@ _PolyMC + Alloy Forgery without this mod_<br>
 <br>
 <br>
 _PolyMC + Alloy Forgery with this mod_<br>
-![PolyMC + Alloy Forgery with this mod](https://cdn.discordapp.com/attachments/735840853662236713/940665128423137290/unknown.png)
+
+
+<img src="https://media.discordapp.net/attachments/729827668559659019/1015652400532557934/javaw_g37Mmy1Mra.gif" alt="PolyMC + Alloy Forgery with this mod" width=373>
+
 
 <br>
 
