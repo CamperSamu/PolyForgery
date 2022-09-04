@@ -1,0 +1,20 @@
+{
+  "providers": [
+    {
+      "type": "space",
+      "advances": {
+        ".": 3,
+        "-": -56
+      }
+    },
+    {
+      "type": "bitmap",
+      "file": "polyforgery:gui/lava.png",
+      "ascent": 31,
+      "height": 36,
+      "chars": [
+        "0123"
+      ]
+    }
+  ]
+}

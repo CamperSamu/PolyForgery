@@ -4,6 +4,8 @@
   "package": "com.campersamu.polyforgery.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ForgeControllerBlockEntityMixin",
+    "OwoHandshakeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

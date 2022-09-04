@@ -6,7 +6,7 @@
  */
 
 plugins {
-    id 'fabric-loom' version '0.11-SNAPSHOT'
+    id 'fabric-loom' version '1.0.+'
     id 'maven-publish'
 }
 
@@ -18,7 +18,6 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-    maven { url 'https://jitpack.io' }
     maven {
         name = "Modrinth"
         url = "https://api.modrinth.com/maven"
@@ -27,12 +26,12 @@ repositories {
         }
     }
     maven { url = "https://maven.nucleoid.xyz/" }
-    repositories {
-        maven {
-            url "https://maven.theepicblock.nl"
-            content { includeGroup("nl.theepicblock") }
-        }
+    maven {
+        url "https://maven.theepicblock.nl"
+        content { includeGroup("nl.theepicblock") }
     }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url 'https://jitpack.io' }
     mavenLocal()
 }
 
@@ -47,8 +46,18 @@ dependencies {
     modImplementation "com.github.TheEpicBlock:PolyMc:${project.polymc_version}"
 //    modImplementation include("com.github.TheEpicBlock:resource-locator-api:${project.poly_res_version}")
     modImplementation "maven.modrinth:alloy-forgery:${project.alloy_forgery_version}"
-    modCompileOnly "maven.modrinth:polydex:${project.polydex_version}"
-    modCompileOnly "eu.pb4:sgui:${project.sgui_version}"
+    modImplementation "maven.modrinth:owo-lib:${project.owo_version}"
+    modImplementation "maven.modrinth:polydex:${project.polydex_version}"
+    modImplementation "eu.pb4:sgui:${project.sgui_version}"
+    modRuntimeOnly "eu.pb4:player-data-api:${project.player_data_version}"
+    modRuntimeOnly "xyz.nucleoid:more-codecs:${project.codecs_version}"
+    modRuntimeOnly "eu.pb4:sidebar-api:${project.sidebar_version}"
+    modRuntimeOnly 'me.lucko:fabric-permissions-api:0.1-SNAPSHOT'
+    modRuntimeOnly "fr.catcore:server-translations-api:${project.translations_version}"
+
+    // Resoucepack host testing
+    modRuntimeOnly "eu.pb4:polymer:${project.polymer}"
+    modRuntimeOnly "eu.pb4:polymer-autohost:${project.polymer_host}"
 }
 
 processResources {
