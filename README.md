@@ -33,6 +33,9 @@ For setup instructions please see the [fabric wiki page](https://fabricmc.net/wi
 - [Fabric Server-Side Development Discord for helping me while making this mod and other mods](https://discord.gg/spsDnxp) (like [WAYF?](https://github.com/CamperSamu/WhereAreYouFrom))
 - [AmberWat for the Negative Spaces Resourcepack](https://github.com/AmberWat/NegativeSpaceFont)
 
+### Direct Code Contributions
+- [Potatoboy for the much needed v2/rewrite and update](https://github.com/PotatoPresident)
+
 ## License
 
 This mod is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
