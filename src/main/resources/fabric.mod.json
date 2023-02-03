@@ -7,7 +7,8 @@
   "description": "GUI polyfill for Alloy Forgery with PolyMC API.",
   "authors": [
     "Camper_Samu",
-    "Potatoboy9999"
+    "Potatoboy9999",
+    "Obydux"
   ],
   "contact": {
     "homepage": "https://github.com/CamperSamu",
@@ -33,13 +34,13 @@
   "depends": {
     "fabricloader": "*",
     "fabric": "*",
-    "minecraft": "1.19.x",
-    "polymc": ">=5.0.0",
-    "alloy_forgery": ">=2.0.14+1.19",
+    "minecraft": ">=1.19.3",
+    "polymc": ">=5.3.0",
+    "alloy_forgery": ">=2.0.18",
     "java": ">=17"
   },
   "suggests": {
     "shoutout": "*",
-    "polydex": ">=0.1.7+1.19-rc2"
+    "polydex": ">=0.2.0"
   }
 }
