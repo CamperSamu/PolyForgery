@@ -1,9 +1,6 @@
 package com.campersamu.polyforgery.compat.polydex;
 
 
-import eu.pb4.polydex.api.ItemEntry;
-import eu.pb4.polydex.api.ItemPageView;
-import eu.pb4.polydex.api.PolydexUtils;
 import eu.pb4.sgui.api.elements.GuiElement;
 import eu.pb4.sgui.api.elements.GuiElementBuilder;
 import eu.pb4.sgui.api.gui.layered.Layer;
@@ -15,13 +12,14 @@ import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.collection.DefaultedList;
+import org.jetbrains.annotations.Nullable;
 import wraith.alloyforgery.recipe.AlloyForgeRecipe;
 
 import java.util.List;
 
-public class AlloyForgeryRecipeView implements ItemPageView<AlloyForgeRecipe> {
+public class AlloyForgeryRecipeView /*implements AbstractRecipePolydexPage<AlloyForgeRecipe>*/ {
 
-    @Override
+    /*@Override
     public GuiElement getIcon(ItemEntry itemEntry, AlloyForgeRecipe recipe, ServerPlayerEntity serverPlayerEntity, Runnable runnable) {
         return new GuiElementBuilder(Items.BRICKS)
                 .setName(Text.translatable("container.alloy_forgery.rei.title"))
@@ -52,4 +50,20 @@ public class AlloyForgeryRecipeView implements ItemPageView<AlloyForgeRecipe> {
     public static void init(){
         ItemPageView.registerRecipe(AlloyForgeRecipe.Type.INSTANCE, new AlloyForgeryRecipeView());
     }
+
+    @Override
+    public ItemStack typeIcon(ServerPlayerEntity player) {
+        return new GuiElementBuilder(Items.BRICKS)
+                .setName(Text.translatable("container.alloy_forgery.rei.title"))
+                .setLore(List.of(
+                        Text.translatable("container.alloy_forgery.rei.min_tier", recipe.getMinForgeTier()).setStyle(Style.EMPTY.withColor(Formatting.GRAY)),
+                        Text.translatable("container.alloy_forgery.rei.fuel_per_tick", recipe.getFuelPerTick()).setStyle(Style.EMPTY.withColor(Formatting.GRAY))
+                ))
+                .build();
+    }
+
+    @Override
+    public void createPage(@Nullable PolydexEntry entry, ServerPlayerEntity player, PageBuilder layer) {
+
+    }*/
 }

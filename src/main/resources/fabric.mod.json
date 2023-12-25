@@ -33,7 +33,7 @@
   "depends": {
     "fabricloader": "*",
     "fabric": "*",
-    "minecraft": "1.19.x",
+    "minecraft": "1.20.x",
     "polymc": ">=5.0.0",
     "alloy_forgery": ">=2.0.14+1.19",
     "java": ">=17"

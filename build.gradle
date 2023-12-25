@@ -6,7 +6,7 @@
  */
 
 plugins {
-    id 'fabric-loom' version '1.0.+'
+    id 'fabric-loom' version '1.4-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -32,6 +32,13 @@ repositories {
     }
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url 'https://jitpack.io' }
+    maven {
+        name 'Quilt'
+        url 'https://maven.quiltmc.org/repository/release'
+        content {
+            includeGroupByRegex("org\\.quiltmc.*")
+        }
+    }
     mavenLocal()
 }
 
@@ -43,21 +50,22 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modImplementation "com.github.TheEpicBlock:PolyMc:${project.polymc_version}"
-//    modImplementation include("com.github.TheEpicBlock:resource-locator-api:${project.poly_res_version}")
+    modImplementation ("com.github.TheEpicBlock:PolyMc:${project.polymc_version}"){
+        transitive(false)
+    }
+    modImplementation include("nl.theepicblock:resource-locator-api:${project.resource_locator_api_version}") {
+        exclude group: 'net.fabricmc', module: 'fabric-loader'
+    }
     modImplementation "maven.modrinth:alloy-forgery:${project.alloy_forgery_version}"
     modImplementation "maven.modrinth:owo-lib:${project.owo_version}"
-    modImplementation "maven.modrinth:polydex:${project.polydex_version}"
+    modImplementation "eu.pb4:polydex:${project.polydex_version}"
     modImplementation "eu.pb4:sgui:${project.sgui_version}"
     modRuntimeOnly "eu.pb4:player-data-api:${project.player_data_version}"
-    modRuntimeOnly "xyz.nucleoid:more-codecs:${project.codecs_version}"
-    modRuntimeOnly "eu.pb4:sidebar-api:${project.sidebar_version}"
     modRuntimeOnly 'me.lucko:fabric-permissions-api:0.1-SNAPSHOT'
-    modRuntimeOnly "fr.catcore:server-translations-api:${project.translations_version}"
+    modRuntimeOnly "xyz.nucleoid:server-translations-api:${project.translations_version}"
 
     // Resoucepack host testing
-    modRuntimeOnly "eu.pb4:polymer:${project.polymer}"
-    modRuntimeOnly "eu.pb4:polymer-autohost:${project.polymer_host}"
+    modRuntimeOnly "eu.pb4:polymer-resource-pack:${project.polymer}"
 }
 
 processResources {

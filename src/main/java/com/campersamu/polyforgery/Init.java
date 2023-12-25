@@ -41,10 +41,10 @@ public class Init implements PolyMcEntrypoint, ModInitializer {
 
     @Override
     public void onInitialize() {
-        if (getInstance().isModLoaded("polydex")){
+        /*if (getInstance().isModLoaded("polydex")){
             LOGGER.info("Polydex found! PolyForgery is going to add the recipe screen to the reicpe viewer!");
             AlloyForgeryRecipeView.init();
-        }
+        }*/
     }
 
     public static Identifier id(String path) {
