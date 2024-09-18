@@ -11,6 +11,7 @@ base {
 }
 
 repositories {
+	mavenLocal()
 	maven {
 		name = 'Nucleoid'
 		url = 'https://maven.nucleoid.xyz/'
@@ -44,7 +45,7 @@ dependencies {
 	modImplementation "maven.modrinth:alloy-forgery:${project.alloy_forgery_version}"
 	modImplementation "maven.modrinth:owo-lib:${project.owo_version}"
 	modImplementation "eu.pb4:polydex:${project.polydex_version}"
-	modImplementation "eu.pb4:sgui:${project.sgui_version}"
+	include modImplementation("eu.pb4:sgui:${project.sgui_version}")
 
 	// Resource pack host testing
 	modRuntimeOnly "eu.pb4:polymer-bundled:${project.polymer_version}"
